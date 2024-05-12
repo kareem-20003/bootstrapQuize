@@ -1,0 +1,587 @@
+body{
+  scroll-behavior: smooth;
+  position: relative;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family:  "Montserrat", sans-serif;
+}
+p,
+span,
+a{
+  font-family:  "Poppins", sans-serif;
+}
+a{
+  text-decoration: none;
+  all:unset;
+  font-family:  "Poppins", sans-serif;
+}
+.container{
+  width: 80%;
+}
+@media screen and (max-width: 768px) {
+  .container{
+    width: 95%;
+  }
+}
+.section-title{
+  text-align: center;
+  margin-bottom: 80px;
+}
+.section-title h2{
+  position: relative;
+    font-size: 40px;
+    display: inline-block;
+    z-index: 4;
+}
+.section-title h2::after{
+  content: "";
+  width: 100%;
+  height: 30px;
+  background-image: url(../imgs/dots.png);
+  background-repeat: repeat;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  z-index: -1;
+}
+.navbar-toggler{
+  border: none !important;
+}
+.navbar-toggler i{
+  font-size:25px ;
+  font-weight:light;
+  color:#111111;
+}
+.navbar-toggler:focus{
+  box-shadow: none;
+}
+.navbar .navbar-nav .nav-link.active{
+  background-color: transparent !important;
+}
+.navbar-brand{
+color: white !important ;
+}
+.brand-color{
+  color: #111 !important;
+  transition: .5s ease-in-out;
+}
+.navbar .navbar-nav .nav-link{
+  color: white !important;
+  border: none;
+  border-color:transparent ;
+  background-color: transparent !important;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 20px !important;
+  position: relative;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.navbar .navbar-nav .nav-link::after{
+content:"";
+background-color:#fff;
+width: 50%;
+height: 2px;
+position: absolute;
+bottom: 15px;
+left: 20px;
+transform: scale(0);
+transition: .5s ease-out ;
+}
+@media screen and (max-width:991px) {
+  .navbar .navbar-nav .nav-link::after{
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    background-color: white;
+  }
+  .navbar .navbar-nav .nav-link:hover::after,
+  .navbar .navbar-nav .nav-link:active::after,
+  .navbar .navbar-nav .nav-link:focus::after{
+  transform: scale(0) !important;
+}
+}
+.navbar .navbar-nav .nav-link.after-black-background::after {
+  background-color: black;
+}
+.navbar .navbar-nav .nav-link.dark-color{
+  color: black !important;
+  transition: .5s ease-in-out;
+}
+  .navbar .navbar-nav .nav-link:hover::after,
+  .navbar .navbar-nav .nav-link:active::after,
+  .navbar .navbar-nav .nav-link:focus::after{
+  transform: scale(1) !important;
+}
+.navbar .navbar-nav .nav-link.active{
+  font-weight: 400 !important;
+  font-size: 13px;
+}
+.navbar .navbar-nav .nav-link.active::after,
+[data-bs-spy="scroll"] .navbar .navbar-nav .nav-link:hover::after {
+  transform: scaleX(1); 
+}
+/*  */
+.bg-white{
+  transition: .5s ease-in-out;
+}
+.color-white{
+  color:white !important;
+}
+@media screen and (max-width:950px) {
+  .navbar ul{
+    background-color: white;
+  }
+  .navbar .navbar-nav .nav-link{
+    color: #111 !important;
+  }
+  .navbar .container {
+    width: 100% !important;
+  }
+}
+/* navbar */
+/*  home*/
+.home{
+  background-image: url(../imgs/bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+.layer{
+  background-color: rgba(0, 0, 0, 0.7);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.homeContent h1{
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.homeContent a{
+  display: inline-block;
+  margin-right: 10px;
+  background-color: rgba(0,0,0,.6);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.homeContent a i{
+  line-height: 40px;
+}
+.homeContent h2::after{
+  content: "";
+  font-weight:300;
+  animation: typing 5s  infinite;
+  font-size: 50px;
+}
+@keyframes typing {
+  0%{
+    content: "|";
+  }
+  
+  1%{
+    content: "D|";
+  }
+  
+  2%{
+    content: "De|";
+  }
+  
+  4%{
+    content: "Des|";
+  }
+  
+  6%{
+    content: "Desi|";
+  }
+  
+  8%{
+    content: "Desig|";
+  }
+  
+  10%{
+    content: "Design|";
+  }
+  
+  12%{
+    content: "Designe|";
+  }
+  
+  14%{
+    content: "Designer|";
+  }
+  
+  20%{
+    content: "L|";
+  }
+  
+  22%{
+    content: "la|";
+  }
+  
+  24%{
+    content: "lar|";
+  }
+  
+  26%{
+    content: "Larr|";
+  }
+  
+  28%{
+    content: "Larry";
+  }
+  
+  30%{
+    content: "Larry D|";
+  }
+  
+  32%{
+    content: "Larry Da|";
+  }
+  
+  34%{
+    content: "Larry Dan|";
+  }
+  
+  0%{
+    content: "Larry Dani|";
+  }
+  
+  36%{
+    content: "|Larry Danie";
+  }
+  
+  38%{
+    content: "Larry Daniel|";
+  }
+  
+  40%{
+    content: "Larry Daniels|";
+  }
+  
+  50%{
+    content: "D|";
+  }
+  55%{
+    content: "De|";
+  }
+  60%{
+    content: "Dev|";
+  }
+  70%{
+    content: "Deve|";
+  }
+  75%{
+    content: "Devel|";
+  }
+  80%{
+    content: "Develo|";
+  }
+  88%{
+    content: "Develop|";
+  }
+  94%{
+    content: "Develope|";
+  }
+  100%{
+    content: "Developer|";
+  }
+  
+  
+  
+
+  
+}
+/* end home */
+
+/* about section */
+.about{
+  padding: 100px 0 !important;
+}
+.about-img{
+  position:relative;
+  padding:0 0 0 30px;
+  vertical-align: middle;
+}
+.about-img::after{
+  content: "";
+  background-image: url(../imgs/dots.png);
+  width: 80%;
+  height: 80%;
+  background-repeat: repeat;
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  z-index: -1;
+} 
+.progress{
+  box-shadow:0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+  background-color: #f7f7f7;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+}
+.downloadBtn.btn{
+  background-color: black;
+  color:#f7f7f7;
+  transition: all .3s ease-in-out;
+
+}
+.downloadBtn.btn:hover{
+  background-color: #f7f7f7;
+  color:black;
+  border-color:black !important; ;
+}
+
+/*
+ end about section */
+ /* services */
+  .services{
+    background-color: #f7f7f7;
+    padding: 80px 0;
+  }
+  .services-item{
+    padding: 50px 20px;
+    background: #fff;
+    -webkit-box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border-radius: 5px
+  }
+  .services-item p{
+    word-spacing: 2px;
+    font-size: 14px;
+  }
+  .services .icon{
+    margin: auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #f4f4f4;
+    transition: all .5s ease-in-out;
+  }
+  .services-item:hover .icon{
+    background-color: black;
+    color:#f7f7f7;
+  }
+  .services .icon i{
+    line-height: 70px;
+  }
+  
+ /* end services */
+ /* portfolio */
+  .portfolio{
+  padding: 80px 0;
+  }
+  .portImg{
+    position: relative;
+  }
+  .portOverlay{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background: rgba(255, 255, 255, 0.95);
+    opacity: 0;
+    transform: translateY(10px);
+      transition: all 0.5s;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+}
+.portOverlay .portIcons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.portOverlay h6{
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  position: relative;
+  transform: translateY(-15px);
+  margin-bottom: 15px;
+  transition: all 0.5s ease-in-out ; 
+}
+.portOverlay .portIcons .icon{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: black;
+  color: #fff;
+  text-align: center;
+  transition: all .3s;
+}
+.portOverlay .portIcons .icon:hover{
+  background: #f7f7f7;
+  color: black;
+}
+.portOverlay .portIcons .icon i{
+  line-height: 30px;
+}
+.portfolioItem:hover .portOverlay{
+  opacity: 1;
+  transform: translateY(0);
+}
+.portfolioItem:hover .portOverlay h6{
+  transform: translateY(0px);
+
+}
+.nav-item .nav-link ,
+.nav-item .nav-link.active  {
+  background-color: white !important;
+  color: black;
+  font-size: 17px;
+  font-weight: 700;
+  position: relative;
+  text-transform: capitalize;
+}
+.portfolio .nav-item .nav-link::after{
+  content:"";
+  background-color:#090909;
+  width: 55%;
+  height: 2px;
+  position: absolute;
+  bottom: 3px;
+  left: 14px;
+transform: scale(0);
+transition: .5s ease-out ;
+z-index: 999;
+  }
+  .portfolio .nav-item .nav-link:hover::after,
+  .portfolio .nav-item .nav-link:active::after,
+  .portfolio .nav-item .nav-link:focus::after{
+transform: scale(1);
+  }
+
+/* test */
+.test{
+  padding: 100px 0;
+  background-color: #F7F7F8;
+}
+.carousel-indicators{
+  bottom: -50px;
+  /* background-color: green */
+}
+
+.carousel-indicators [data-bs-target]{
+  background:#d6d6d6;
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.carousel-indicators [data-bs-target].active{
+  background: #869791;
+}
+/* end test */
+/* numbers */
+.numbers{
+  padding: 100px 0;
+  background-color: #ffff;
+}
+/* end numbers */
+/* team */
+.team{
+  padding: 100px 0;
+  background-color: #f7f7f7;
+}
+.teamImg{
+  position: relative;
+}
+.teamImg .teamOverlay{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; 
+  opacity: 0;
+  inset: 5px;
+background-color: rgba(255, 255, 255, 0.95);
+transform: rotateY(180deg) scale(.5, .5);
+transition:0.5s ;
+}
+.teamContent:hover .teamOverlay{
+  opacity: 1;
+  transform: rotateY(0deg) scale(1, 1);
+} 
+.teamContent:hover .teamImg{
+  overflow: hidden;
+}
+.teamContent:hover img{
+  transition: all 0.4s ease 0s;
+}
+.teamContent:hover img{
+  transform: scale(1.2);
+}
+.teamImg .teamOverlay .icon{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: black;
+  text-align: center;
+  transition: all .3s;
+  border: 1px solid black;
+}
+.teamImg .teamOverlay .icon:hover{
+  background: #f7f7f7;
+}
+.teamImg .teamOverlay .icon:hover a i{
+  color: black;
+}
+
+.teamImg .teamOverlay .icon i{
+  line-height: 40px;
+  color: white;
+  cursor:pointer;
+  transition: all .3s;
+}
+/* end team */
+/*contact  */
+.contact{
+  padding: 100px 0;
+}
+.contactItem .icon{
+    font-size: 25px;
+    width: 60px;
+    height: 60px;
+    background: #f4f4f4;
+    border-radius: 50%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    text-align: center;
+    margin: 0px  auto 15px;
+  } 
+  .contactItem .icon i{
+  line-height: 60px;
+}
+.contact .container{
+  width: 970px;
+}
+.contactItem:hover .icon{
+  background: black;
+  color: #fff;
+}
+.contact .form-control{
+  width: 100%;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    background: #f4f4f4;
+}
+.form-control:focus {
+  outline: 0;
+  box-shadow:none;
+}
+/*end contact  */
